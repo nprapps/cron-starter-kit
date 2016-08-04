@@ -2,7 +2,7 @@
 
 ## About this template
 
-This is a dead simple starter kit for deploying and maintaining cron jobs on EC2 servers.
+This is a simple starter kit for deploying and maintaining cron jobs on EC2 servers.
 
 The kit gives you:
 
