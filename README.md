@@ -50,6 +50,7 @@ fab bootstrap:$GITHUB_USERNAME,$REPOSITORY_NAME
 
 This project contains a number of default variables for NPR's setup. These all live in `app_config.py`. To adapt this for your organization, change the following variables to the appropriate values:
 
+* `GITHUB_USERNAME` -- Github username so that this project pushes and pulls from the correct repo
 * `PRODUCTION_S3_BUCKET` -- From production, the S3 bucket the cron job would deploy to
 * `STAGING_S3_BUCKET` -- From staging, the S3 bucket the cron job would deploy to
 * `PRODUCTION_SERVERS` -- A list of servers to deploy to when deploying to production
