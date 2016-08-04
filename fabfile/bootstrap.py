@@ -7,7 +7,6 @@ after execution.
 import app_config
 import logging
 import os
-import utils
 
 from fabric.api import local, task
 
@@ -43,3 +42,12 @@ def go(github_username=app_config.GITHUB_USERNAME, repository_name=None):
     local('git commit -am "Initial import from app-template."')
     local('git remote add origin git@github.com:%s/%s.git' % (github_username, config['$NEW_REPOSITORY_NAME']))
     local('git push -u origin master')
+
+def confirm(message):
+    """
+    Verify a users intentions.
+    """
+    answer = prompt(message, default="Not at all")
+
+    if answer.lower() not in ('y', 'yes', 'buzz off', 'screw you'):
+        exit()
