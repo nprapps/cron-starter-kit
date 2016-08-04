@@ -19,7 +19,6 @@ def go(github_username=app_config.GITHUB_USERNAME, repository_name=None):
     """
     Execute the bootstrap tasks for a new project.
     """
-    check_credentials()
     config_files = ' '.join(['PROJECT_README.md', 'app_config.py', 'crontab'])
 
     config = {}
