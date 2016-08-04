@@ -26,7 +26,7 @@ def go(github_username=app_config.GITHUB_USERNAME, repository_name=None):
     config['$NEW_REPOSITORY_NAME'] = repository_name or config['$NEW_PROJECT_SLUG']
     config['$NEW_PROJECT_FILENAME'] = config['$NEW_PROJECT_SLUG'].replace('-', '_')
 
-    utils.confirm("Have you created a Github repository named \"%s\"?" % config['$NEW_REPOSITORY_NAME'])
+    confirm("Have you created a Github repository named \"%s\"?" % config['$NEW_REPOSITORY_NAME'])
 
     for k, v in config.items():
         local('sed -i "" \'s|%s|%s|g\' %s' % (k, v, config_files))
