@@ -34,7 +34,6 @@ cd $NEW_PROJECT_NAME
 
 mkvirtualenv $NEW_PROJECT_NAME
 pip install -r requirements.txt
-npm install
 
 fab bootstrap
 ```
