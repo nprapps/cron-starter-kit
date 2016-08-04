@@ -8,7 +8,7 @@ import app_config
 import logging
 import os
 
-from fabric.api import local, task
+from fabric.api import local, prompt, task
 
 logging.basicConfig(format=app_config.LOG_FORMAT)
 logger = logging.getLogger(__name__)
